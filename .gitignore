@@ -1,0 +1,25 @@
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Python environment and cache
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Uploaded documents and generated vector indexes
+uploads/
+sample_paper.pdf
+faiss_index/
+faiss_index_*/
+chroma_db/
+*.joblib
+
+# Editor and operating system files
+.vscode/
+.DS_Store
+
