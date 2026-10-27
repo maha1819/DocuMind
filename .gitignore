@@ -23,3 +23,15 @@ chroma_db/
 .vscode/
 .DS_Store
 
+# Evaluation outputs and checkpoints
+evaluation/answer_results_*.json
+evaluation/checkpoints/
+evaluation/retrieval_results*.json
+
+# Local backup files
+*.backup
+*.pre_methods_backup
+rag_engine_diff.txt
+
+# Local test datasets
+evaluation/smoke_test.json

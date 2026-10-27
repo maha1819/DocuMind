@@ -1,0 +1,257 @@
+[
+  {
+    "id": "RAG-01",
+    "question": "What is the main contribution of the paper?",
+    "answerable": true,
+    "expected_pages": [
+      1
+    ],
+    "reference_answer": "The paper introduces the Transformer, an architecture based entirely on attention mechanisms, without recurrence or convolution."
+  },
+  {
+    "id": "RAG-02",
+    "question": "What are the two main components of the Transformer encoder-decoder architecture?",
+    "answerable": true,
+    "expected_pages": [
+      3
+    ],
+    "reference_answer": "The Transformer consists of an encoder and a decoder, each built from stacks of layers."
+  },
+  {
+    "id": "RAG-03",
+    "question": "Why does the Transformer use positional encodings?",
+    "answerable": true,
+    "expected_pages": [
+      6
+    ],
+    "reference_answer": "Positional encodings provide information about token positions because the model does not use recurrence or convolution to represent sequence order."
+  },
+  {
+    "id": "RAG-04",
+    "question": "What is the population of Bengaluru?",
+    "answerable": false,
+    "expected_pages": [],
+    "reference_answer": null
+  },
+  {
+    "id": "RAG-05",
+    "question": "What is the capital of Japan?",
+    "answerable": false,
+    "expected_pages": [],
+    "reference_answer": null
+  },
+  {
+    "id": "RAG-06",
+    "question": "What optimizer was used to train the Transformer model?",
+    "answerable": true,
+    "expected_pages": [
+      7
+    ],
+    "reference_answer": "The paper describes using the Adam optimizer with a custom learning-rate schedule."
+  },
+  {
+    "id": "RAG-07",
+    "question": "Why does sequential computation make recurrent models harder to parallelize during training?",
+    "answerable": true,
+    "expected_pages": [
+      2
+    ],
+    "reference_answer": "Recurrent models compute hidden states sequentially across token positions, limiting parallelization within a training example, especially for long sequences."
+  },
+  {
+    "id": "RAG-08",
+    "question": "What is self-attention, also called intra-attention?",
+    "answerable": true,
+    "expected_pages": [
+      2
+    ],
+    "reference_answer": "Self-attention relates different positions within a single sequence to compute a representation of that sequence."
+  },
+  {
+    "id": "RAG-09",
+    "question": "In the Transformer encoder-decoder structure, what does the encoder produce and what does the decoder do with it?",
+    "answerable": true,
+    "expected_pages": [
+      2,
+      3
+    ],
+    "reference_answer": "The encoder maps input symbols to continuous representations; the decoder uses those representations to generate output symbols autoregressively."
+  },
+  {
+    "id": "RAG-10",
+    "question": "How many identical layers are in the Transformer encoder, and what are its two sublayers?",
+    "answerable": true,
+    "expected_pages": [
+      3
+    ],
+    "reference_answer": "The encoder has six identical layers, each containing a multi-head self-attention sublayer and a position-wise feed-forward network."
+  },
+  {
+    "id": "RAG-11",
+    "question": "What additional sublayer does each Transformer decoder layer contain?",
+    "answerable": true,
+    "expected_pages": [
+      3
+    ],
+    "reference_answer": "The decoder adds a multi-head attention sublayer over the encoder stack's output."
+  },
+  {
+    "id": "RAG-12",
+    "question": "Why is future-position masking applied in the Transformer decoder?",
+    "answerable": true,
+    "expected_pages": [
+      3
+    ],
+    "reference_answer": "Masking prevents a position from attending to subsequent output positions, so predictions depend only on known earlier outputs."
+  },
+  {
+    "id": "RAG-13",
+    "question": "How does scaled dot-product attention calculate the weights applied to values?",
+    "answerable": true,
+    "expected_pages": [
+      4
+    ],
+    "reference_answer": "It computes query-key dot products, scales them by the square root of the key dimension, applies softmax, and uses the resulting weights over the values."
+  },
+  {
+    "id": "RAG-14",
+    "question": "Why do the authors scale query-key dot products by the square root of the key dimension?",
+    "answerable": true,
+    "expected_pages": [
+      4
+    ],
+    "reference_answer": "Large dot products can push softmax into regions with extremely small gradients; scaling helps counteract that effect."
+  },
+  {
+    "id": "RAG-15",
+    "question": "What practical advantages does dot-product attention have over additive attention according to the paper?",
+    "answerable": true,
+    "expected_pages": [
+      4
+    ],
+    "reference_answer": "Dot-product attention is faster and more space-efficient in practice because it can use highly optimized matrix-multiplication code."
+  },
+  {
+    "id": "RAG-16",
+    "question": "How many attention heads are used in the base Transformer, and what are the dimensions of each head's keys and values?",
+    "answerable": true,
+    "expected_pages": [
+      5
+    ],
+    "reference_answer": "The base Transformer uses eight attention heads, with key and value dimensions of 64 each."
+  },
+  {
+    "id": "RAG-17",
+    "question": "What are the three ways multi-head attention is used in the Transformer?",
+    "answerable": true,
+    "expected_pages": [
+      5
+    ],
+    "reference_answer": "It is used for encoder-decoder attention, encoder self-attention, and masked decoder self-attention."
+  },
+  {
+    "id": "RAG-18",
+    "question": "What is the structure of the position-wise feed-forward network in each encoder and decoder layer?",
+    "answerable": true,
+    "expected_pages": [
+      5
+    ],
+    "reference_answer": "It applies two linear transformations with a ReLU activation between them, independently and identically at each position."
+  },
+  {
+    "id": "RAG-19",
+    "question": "Why does the Transformer need positional encodings, and where are they added?",
+    "answerable": true,
+    "expected_pages": [
+      6
+    ],
+    "reference_answer": "Because the model has no recurrence or convolution to represent order, positional encodings are added to input embeddings at the bottoms of the encoder and decoder stacks."
+  },
+  {
+    "id": "RAG-20",
+    "question": "Which mathematical functions are used to construct the paper's positional encodings?",
+    "answerable": true,
+    "expected_pages": [
+      6
+    ],
+    "reference_answer": "The paper uses sine and cosine functions at different frequencies."
+  },
+  {
+    "id": "RAG-21",
+    "question": "How large were the English-German and English-French training datasets used for the translation experiments?",
+    "answerable": true,
+    "expected_pages": [
+      7
+    ],
+    "reference_answer": "The WMT 2014 English-German dataset had about 4.5 million sentence pairs, and the English-French dataset had about 36 million sentences."
+  },
+  {
+    "id": "RAG-22",
+    "question": "What hardware was used to train the Transformer models, and how long did training the base model take?",
+    "answerable": true,
+    "expected_pages": [
+      7
+    ],
+    "reference_answer": "The models were trained on a machine with eight NVIDIA P100 GPUs; the base models trained for 12 hours for English-German and 3.5 days for English-French."
+  },
+  {
+    "id": "RAG-23",
+    "question": "Which Adam optimizer hyperparameters did the authors report?",
+    "answerable": true,
+    "expected_pages": [
+      7
+    ],
+    "reference_answer": "They used Adam with beta1 = 0.9, beta2 = 0.98, and epsilon = 1e-9."
+  },
+  {
+    "id": "RAG-24",
+    "question": "What label-smoothing value did the authors use during training, and what effect did they report?",
+    "answerable": true,
+    "expected_pages": [
+      8
+    ],
+    "reference_answer": "They used label smoothing of 0.1; it increased perplexity by making the model less certain but improved accuracy and BLEU score."
+  },
+  {
+    "id": "RAG-25",
+    "question": "What is the population of Bengaluru?",
+    "answerable": false,
+    "expected_pages": [],
+    "reference_answer": null
+  },
+  {
+    "id": "RAG-26",
+    "question": "What is the capital of Japan?",
+    "answerable": false,
+    "expected_pages": [],
+    "reference_answer": null
+  },
+  {
+    "id": "RAG-27",
+    "question": "Which optimizer did the authors use to train BERT?",
+    "answerable": false,
+    "expected_pages": [],
+    "reference_answer": null
+  },
+  {
+    "id": "RAG-28",
+    "question": "What ImageNet top-1 accuracy did the Transformer achieve?",
+    "answerable": false,
+    "expected_pages": [],
+    "reference_answer": null
+  },
+  {
+    "id": "RAG-29",
+    "question": "How many parameters does GPT-4 contain according to this paper?",
+    "answerable": false,
+    "expected_pages": [],
+    "reference_answer": null
+  },
+  {
+    "id": "RAG-30",
+    "question": "Which hospital patient dataset did the authors use to train a medical diagnosis model?",
+    "answerable": false,
+    "expected_pages": [],
+    "reference_answer": null
+  }
+]

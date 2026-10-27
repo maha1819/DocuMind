@@ -1,0 +1,45 @@
+
+[
+  {
+    "id": "RAG-01",
+    "question": "What is the main contribution of the paper?",
+    "answerable": true,
+    "expected_pages": [1],
+    "reference_answer": "The paper introduces the Transformer, an architecture based entirely on attention mechanisms, without recurrence or convolution."
+  },
+  {
+    "id": "RAG-02",
+    "question": "What are the two main components of the Transformer encoder-decoder architecture?",
+    "answerable": true,
+    "expected_pages": [3],
+    "reference_answer": "The Transformer consists of an encoder and a decoder, each built from stacks of layers."
+  },
+  {
+    "id": "RAG-03",
+    "question": "Why does the Transformer use positional encodings?",
+    "answerable": true,
+    "expected_pages": [6],
+    "reference_answer": "Positional encodings provide information about token positions because the model does not use recurrence or convolution to represent sequence order."
+  },
+  {
+    "id": "RAG-04",
+    "question": "What is the population of Bengaluru?",
+    "answerable": false,
+    "expected_pages": [],
+    "reference_answer": null
+  },
+  {
+    "id": "RAG-05",
+    "question": "What is the capital of Japan?",
+    "answerable": false,
+    "expected_pages": [],
+    "reference_answer": null
+  },
+  {
+    "id": "RAG-06",
+    "question": "What optimizer was used to train the Transformer model?",
+    "answerable": true,
+    "expected_pages": [7],
+    "reference_answer": "The paper describes using the Adam optimizer with a custom learning-rate schedule."
+  }
+]
